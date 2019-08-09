@@ -30,9 +30,6 @@ function MainForm({ values, errors, touched, isSubmitting, status }) {
                 </div>
                 <button type="submit" disabled={isSubmitting} title='submit'>Submit</button>
             </Form>
-                )
-            }
-            )}
         </div>
     );
 }
