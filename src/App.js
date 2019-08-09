@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
 
 import './App.css';
+import { FormikRegisterForm } from './components/Form/Form';
+import { FormikLoginForm } from './components/Form/Form';
+import Navbar from './components/Navbar/Navbar';
+
+import Display from './components/Display/Display';
+// import './styles.css';
+
 
 function App() {
+  const [token, setToken] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Route exact path='/' render={(props) => <FormikRegisterForm {...props} setToken={setToken} text="Register Form" />} />
+      <Route exact path='/login' render={(props) => <FormikLoginForm {...props} setToken={setToken} text="Login Form" />} />
+      <Route exact path='/display' render={(props) => <Display {...props} token={token} />} />
     </div>
   );
 }
