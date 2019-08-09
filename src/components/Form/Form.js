@@ -30,15 +30,8 @@ function MainForm({ values, errors, touched, isSubmitting, status }) {
                 </div>
                 <button type="submit" disabled={isSubmitting} title='submit'>Submit</button>
             </Form>
-            {users.map(user => {
-                return (
-                    <div>
-                        <h1 key={user.username}>{user.username}</h1>
-                        <p>{user.password}</p>
-                    </div>
                 )
             }
-
             )}
         </div>
     );
