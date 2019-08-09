@@ -31,7 +31,6 @@ function Display({ token }) {
             {data.map(item => {
                 return (
                     <Card>
-                        {/* <Image src={userInfo.avatar_url} alt={userInfo.name} size='small' wrapped circular /> */}
                         <Card.Content>
                             <Card.Header>{item.name}</Card.Header>
                             <Card.Meta>{`Course: ${item.course || 'N/A'}`}</Card.Meta>
