@@ -34,7 +34,7 @@ function Display({ token }) {
                         {/* <Image src={userInfo.avatar_url} alt={userInfo.name} size='small' wrapped circular /> */}
                         <Card.Content>
                             <Card.Header>{item.name}</Card.Header>
-                            <Card.Meta>{item.course}</Card.Meta>
+                            <Card.Meta>{`Course: ${item.course || 'N/A'}`}</Card.Meta>
                             <Card.Meta>{`Technique: ${item.technique || 'N/A'}`}</Card.Meta>
                         </Card.Content>
                     </Card>)
